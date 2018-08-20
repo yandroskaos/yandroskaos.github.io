@@ -1,11 +1,11 @@
 # Site settings
 title: Pablo Bravo's Corner
 description: "A bit of security and languages."
-url: "http://localhost:4000/"
+url: "https://yandroskaos.github.io/"
 author:
   name: "Pablo Bravo"
   email: "yandroskaos@gmail.com"
-  url: "http://localhost:4000"
+  url: "https://yandroskaos.github.io/"
 
 
 # Build settings
