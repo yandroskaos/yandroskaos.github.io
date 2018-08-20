@@ -1,11 +1,11 @@
 # Site settings
 title: Pablo Bravo's Corner
 description: "A bit of security and languages."
-url: "https://yandroskaos.github.io/"
+url: "https://yandroskaos.github.io"
 author:
   name: "Pablo Bravo"
   email: "yandroskaos@gmail.com"
-  url: "https://yandroskaos.github.io/"
+  url: "https://yandroskaos.github.io"
 
 
 # Build settings
