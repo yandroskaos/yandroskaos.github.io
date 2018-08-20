@@ -1,0 +1,38 @@
+# Site settings
+title: Pablo Bravo's Corner
+description: "A bit of security and languages."
+url: "http://localhost:4000/"
+author:
+  name: "Pablo Bravo"
+  email: "yandroskaos@gmail.com"
+  url: "http://localhost:4000"
+
+
+# Build settings
+baseurl: /
+markdown: kramdown
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 8
+paginate_path: /page:num/
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# Custom variables
+version: "1.0.0"
+
+# Options
+reverse: false
