@@ -5,10 +5,9 @@ description: Experience
 ---
 
 ## [Core Data](https://coredata.eu/) (2018 – Current)
-Backend technology
+Designing and developing a cryptocurrencies exchange market.
 
 ## [ByteHeed](https://www.byteheed.com/) (2015 – 2018)
-
 Developer of a hypervisor-based protection engine.  
 The hypervisor runs on IA-32, and takes advantage of its interception capabilities to provide a secure environment.  
 
@@ -41,8 +40,8 @@ The system was made principally (among other elements) in different unix process
 ## [Panda Security](https://www.pandasecurity.com/) – (2005 – 2008)
 I researched and developed different innovative technologies at Panda:
 * Research and development of memory signatures to evade the problem related to exepackers (same malware packed lots of times, so disk signatures increase exponentially). Also what got called “heuristic signatures” which was used to identify unknown malware and classify it to its family.
-* In the proactive field, i maintained and extended Panda’s proactive solution. I developed a driver to allow the proactive technologies to control access to USB devices.
-* Also i developed a driver which allowed to monitor in a proactive way rootkit behaviour in kernel. At the time it defeated SDT patches (by large the most common technique) and process hiding via manipulation of the process list.
-* Design and implementation of Panda NanoScan (a light-weight, plugin oriented architected, very fast, web based scanner). At the time, our restriction were 20 seconds and 500KB to scan all memory, certain disk locations and ask Panda’s servers for hashes.
+* I maintained and extended Panda’s proactive solution. I developed a driver to allow the proactive technologies to control access to USB devices.
+* Developed a driver which allowed to monitor in a proactive way rootkit behaviour in kernel. At the time it defeated SDT patches (by large the most common technique) and process hiding via manipulation of the process list.
+* Design and implementation of Panda NanoScan (a light-weight, plugin oriented architected, very fast, web based scanner). At the time, restrictions were 20 seconds and 500KB to scan all memory, certain disk locations and ask Panda’s servers for hashes.
 * Architect (with others) and developer of the kernel of the (at the time) new breed of Panda products.
 
