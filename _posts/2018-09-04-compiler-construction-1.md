@@ -17,10 +17,10 @@ It takes as input language a very simple object oriented language based on the u
 This language has inheritance, interfaces, (simple) I/O, method overloading as well as the typical primitive types and arrays.
 It is strong, statically typed and it targets .NET IL (so with an IL assembler, you can have functional programs).
 
-My plan is to start where other leave, and touch a number of things such as Builder + Visitor patterns applied, types, symbols and 
+My plan is to start where others leave, and touch a number of things such as Builder + Visitor patterns applied, types, symbols and 
 a complete semantics checker. And finally a backend for .NET IL. IL is a very high level assembler and the underlying virtual machine is a stack one.
 This means the backend will be quite easy to write, but would be interesting to develop one for, say, nasm, as complexity increases when the underlying
- machine in a register-based one.
+ machine is a register-based one.
 
 In the meantime, i've publish full source code in my github repo under [oolc](https://github.com/yandroskaos/oolc) so you can take a look.
 
