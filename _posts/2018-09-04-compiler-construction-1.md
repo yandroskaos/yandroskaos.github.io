@@ -7,7 +7,7 @@ category: blog
 This is going to be the first post of a series wich target compiler technology.
 
 Compilers are complex beasts, but we have been writing and studying them for a lot of years, so they are better understood than other kind software, eg: operating systems 
-(by the way, i plan also to write a series of posts on os development, stay tuned).
+(by the way, i plan also to write a series of posts on OS development, stay tuned).
 
 I'm writing this yet-another-compiler-post because i find that there isn't meaningful explanations on the topic out there, everybody seems to be fine
 after explaining lex + yacc.
