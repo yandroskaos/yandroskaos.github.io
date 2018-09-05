@@ -4,7 +4,7 @@ description: PEG parsers
 category: blog
 ---
 
-When you think about parsing, the first thing it comes to mind is recursive descent (by hand) parsers and lex+yacc.
+When you think about parsing, the first thing that comes to mind is recursive descent (by hand) parsers and lex+yacc.
 
 But things changed lately with [this paper](http://bford.info/pub/lang/peg.pdf).
 Designing a new language is a challenge. There are lots of things involved and usually it is nice to have a short 
