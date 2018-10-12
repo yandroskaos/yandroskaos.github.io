@@ -4,7 +4,7 @@ description: First steps with UEFI
 category: blog
 ---
 
-As promised, i am in the process to retake an hobby OS i made 10 years ago.
+As promised, i am in the process to retake a hobby OS i made 10 years ago.
 
 And where do you start from? Yeah, the bootloader. I had a precious MBR-BIOS-based bootloader that mapped a second stage loader which ended loading the kernel and doing all that things that must be done, you know, selectors, stack, A20 line, memory map, where did i boot from?, video parameters, relocate modules in memory... pure joy :D.
 Take a look if you don't trust me [here](https://github.com/yandroskaos/XkyOS/tree/master/XkyOS/Source/Core/Boot).
