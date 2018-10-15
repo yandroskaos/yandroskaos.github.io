@@ -11,7 +11,7 @@ Take a look if you don't trust me [here](https://github.com/yandroskaos/XkyOS/tr
 
 But those days are gone (thankfully!) and UEFI is the thing to support and to use. For those who don't know what does UEFI stand for, it means Unified Extensible Firmware Interface. And it is a civilized way of booting, maybe too much civilized to be honest. So civilized that when your boot code is called you are already in **protected mode** (in 32 bits).
 
-What's more, as i'm updating also to move to x64, UEFI gently lefts the cpu in long mode, with **pagination enabled in identity mode**... (*a little tear drops*).
+What's more, as i'm updating also to move to x64, UEFI gently leaves the cpu in long mode, with **pagination enabled in identity mode**... (*a little tear drops*).
 Well, i must say that this is a qualitative change, i believe that lots of *i'm doing my own OS* initiatives got stuck at the boot phase after dealing with lots of partial and incomplete information just to reach the point where you can actually do something. And a whole lot others just finished this phase and got tired after so much work.
 
 Everything you need about UEFI is [here](http://www.uefi.org/sites/default/files/resources/UEFI_Spec_2_7.pdf), a *minimal* guide of just 2899 pages :D. To be fair it covers **everything** and a number of different architectures and it is no more impressive than the typical hardware specs like Intel's.
