@@ -35,7 +35,7 @@ As a side note, it's possible even to go without a scanner as the type 3 express
 
 So if you want to play with pegs and parser combinators, i've shared source code in my github repo under [languages](https://github.com/yandroskaos/languages). There are a number of combinators for common type 3 and type 2 expressions as well as other *goodies* such as common parsers for more classic tokens and a whole class of *semantic* parsers to construct a syntax tree in a logical way.
 
-Also, using those, i've described a language to describe the parsers (boot-strapped, self-reference... you know what i mean). It's also included as a demonstration of the use of the code, but can be used to have a nice parser generator which understands syntax like this:
+Also, using those, I've described a language to describe the parsers (boot-strapped, self-reference... you know what I mean). It's also included as a demonstration of the use of the code, but can be used to have a nice parser generator which understands syntax like this:
 
 ```
 
