@@ -23,32 +23,32 @@ To explore Linux a bit more, I wanted to develop a minimal Linux filesystem. Tha
 Things started bad, not gonna say otherwise. The first module I compiled and launched made the kernel pagefault with a stacktrace as beautiful as this:
 
 ```
-Nov 29 19:32:08 hp-laptop kernel: [32683.360835] RIP: 0010:sget_userns+0x3ed/0x490
-Nov 29 19:32:08 hp-laptop kernel: [32683.360842] RSP: 0018:ffffc0df82cd3cf0 EFLAGS: 00010246
-Nov 29 19:32:08 hp-laptop kernel: [32683.360851] RAX: ffffffffc0bde070 RBX: 0000000000000000 RCX: 0000000000000000
-Nov 29 19:32:08 hp-laptop kernel: [32683.360858] RDX: ffff9fc89d7a50e8 RSI: ffffffffc0bde43c RDI: ffff9fc89d7a53db
-Nov 29 19:32:08 hp-laptop kernel: [32683.360865] RBP: ffffc0df82cd3d30 R08: ffff9fc67f8651b8 R09: ffff9fc8a8803c80
-Nov 29 19:32:08 hp-laptop kernel: [32683.360871] R10: ffffc0df82cd3c10 R11: 0000000000000388 R12: ffffffff8d878990
-Nov 29 19:32:08 hp-laptop kernel: [32683.360878] R13: ffffffff8f0bbcf4 R14: ffffffffc0bde040 R15: ffff9fc89d7a5000
-Nov 29 19:32:08 hp-laptop kernel: [32683.360887] FS:  00007ff845691080(0000) GS:ffff9fc8b1480000(0000) knlGS:0000000000000000
-Nov 29 19:32:08 hp-laptop kernel: [32683.360895] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
-Nov 29 19:32:08 hp-laptop kernel: [32683.360902] CR2: ffffffffc0bde070 CR3: 00000001ed784002 CR4: 00000000003606e0
-Nov 29 19:32:08 hp-laptop kernel: [32683.360908] Call Trace:
-Nov 29 19:32:08 hp-laptop kernel: [32683.360921]  ? ns_test_super+0x20/0x20
-Nov 29 19:32:08 hp-laptop kernel: [32683.360937]  ? set_bdev_super+0x40/0x40
-Nov 29 19:32:08 hp-laptop kernel: [32683.360949]  sget+0x7d/0xa0
-Nov 29 19:32:08 hp-laptop kernel: [32683.360959]  ? ns_test_super+0x20/0x20
-Nov 29 19:32:08 hp-laptop kernel: [32683.360970]  mount_bdev+0x117/0x290
-Nov 29 19:32:08 hp-laptop kernel: [32683.360979]  ? 0xffffffffc0bdd000
-Nov 29 19:32:08 hp-laptop kernel: [32683.360992]  tfs_mount+0x1b/0x60 [tfs]
-Nov 29 19:32:08 hp-laptop kernel: [32683.361003]  mount_fs+0x37/0x150
-Nov 29 19:32:08 hp-laptop kernel: [32683.361018]  ? alloc_vfsmnt+0x1b3/0x230
-Nov 29 19:32:08 hp-laptop kernel: [32683.361028]  vfs_kern_mount.part.23+0x5d/0x110
-Nov 29 19:32:08 hp-laptop kernel: [32683.361038]  do_mount+0x5ed/0xce0
-Nov 29 19:32:08 hp-laptop kernel: [32683.361053]  ? memdup_user+0x4f/0x80
-Nov 29 19:32:08 hp-laptop kernel: [32683.361064]  SyS_mount+0x98/0xe0
-Nov 29 19:32:08 hp-laptop kernel: [32683.361078]  do_syscall_64+0x73/0x130
-Nov 29 19:32:08 hp-laptop kernel: [32683.361093]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+Nov 29 19:32:08 kernel: [...] RIP: 0010:sget_userns+0x3ed/0x490
+Nov 29 19:32:08 kernel: [...] RSP: 0018:ffffc0df82cd3cf0 EFLAGS: 00010246
+Nov 29 19:32:08 kernel: [...] RAX: ffffffffc0bde070 RBX: 0000000000000000 RCX: 0000000000000000
+Nov 29 19:32:08 kernel: [...] RDX: ffff9fc89d7a50e8 RSI: ffffffffc0bde43c RDI: ffff9fc89d7a53db
+Nov 29 19:32:08 kernel: [...] RBP: ffffc0df82cd3d30 R08: ffff9fc67f8651b8 R09: ffff9fc8a8803c80
+Nov 29 19:32:08 kernel: [...] R10: ffffc0df82cd3c10 R11: 0000000000000388 R12: ffffffff8d878990
+Nov 29 19:32:08 kernel: [...] R13: ffffffff8f0bbcf4 R14: ffffffffc0bde040 R15: ffff9fc89d7a5000
+Nov 29 19:32:08 kernel: [...] FS:  00007ff845691080(0000) GS:ffff9fc8b1480000(0000) knlGS:0000000000000000
+Nov 29 19:32:08 kernel: [...] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+Nov 29 19:32:08 kernel: [...] CR2: ffffffffc0bde070 CR3: 00000001ed784002 CR4: 00000000003606e0
+Nov 29 19:32:08 kernel: [...] Call Trace:
+Nov 29 19:32:08 kernel: [...]  ? ns_test_super+0x20/0x20
+Nov 29 19:32:08 kernel: [...]  ? set_bdev_super+0x40/0x40
+Nov 29 19:32:08 kernel: [...]  sget+0x7d/0xa0
+Nov 29 19:32:08 kernel: [...]  ? ns_test_super+0x20/0x20
+Nov 29 19:32:08 kernel: [...]  mount_bdev+0x117/0x290
+Nov 29 19:32:08 kernel: [...]  ? 0xffffffffc0bdd000
+Nov 29 19:32:08 kernel: [...]  tfs_mount+0x1b/0x60 [tfs]
+Nov 29 19:32:08 kernel: [...]  mount_fs+0x37/0x150
+Nov 29 19:32:08 kernel: [...]  ? alloc_vfsmnt+0x1b3/0x230
+Nov 29 19:32:08 kernel: [...]  vfs_kern_mount.part.23+0x5d/0x110
+Nov 29 19:32:08 kernel: [...]  do_mount+0x5ed/0xce0
+Nov 29 19:32:08 kernel: [...]  ? memdup_user+0x4f/0x80
+Nov 29 19:32:08 kernel: [...]  SyS_mount+0x98/0xe0
+Nov 29 19:32:08 kernel: [...]  do_syscall_64+0x73/0x130
+Nov 29 19:32:08 kernel: [...]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
 ```
 
 Which made me stare for minutes... But was not unexpected, it was not going to be that easy.
