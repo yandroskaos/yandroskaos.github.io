@@ -70,7 +70,7 @@ Later I had forgotten strings in disk were stored as pascal strings (size + data
 
 But in the end I made it work. It is a readonly filesystem for the filesystem I defined for a previous project. I plan to add now the support for writing and maybe also handle permissions as now it is only for root.
 
-As a summary, I like the filesystem interface for Linux, some parts are not as polished as when writing a Windows file system minifilter but on the other hand you can get a module up and running in less time.
+As a summary, I like the filesystem interface for Linux, some parts are not as polished as when writing a Windows Filesystem Driver, altough this last one is more complicated than its Linux counterpart, but on the other hand you can get a module up and running in less time. Windows Filesystem minifilters or LWF network drivers would be an adequate comparison.
 
 You can find the code [here](https://github.com/yandroskaos/tfs).
 
