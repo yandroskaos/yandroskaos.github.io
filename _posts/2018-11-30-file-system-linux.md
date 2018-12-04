@@ -8,7 +8,7 @@ Now I develop on Linux and I am curious on its internals. After reading a number
 
 Before somebody starts to throw stones at me, let me explain a bit more.
 
-Both systems are mainly monolithic kernels built around paging as memory protection feature for processes. System call mechanisms is similar. Dynamic modules can be loaded on both. 
+Both systems are mainly monolithic kernels built around paging as memory protection feature for processes. System call mechanisms are similar. Dynamic modules can be loaded on both. 
 
 While Windows uses abstractions for both processes and threads, Linux builds them around the task concept but it's almost the same. You can think of tasks as threads which live in a shared address space which they point at. Windows only makes this more clear by saving the address space in the process abstraction.
 
